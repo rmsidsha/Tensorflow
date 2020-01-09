@@ -1,0 +1,58 @@
+1. download anaconda
+
+2. 관리자 모드 anaconda prompt열기
+
+3. conda create -n VTR_NAME python=VERSION
+	VTR_NAME = tensorflow_example
+	VERSION = 3.6
+	Proceed y/n?  y
+
+4. activate VTR_NAME
+
+5. install tensorflow
+	conda install tensorflow
+
+6. check to installed tensorflow
+	python
+	import tensorflow as tf
+	tf.__version__
+
+7. use Jupyter Notebook
+	ananconda prompt
+	install jupyter notebook
+8. jupyter page
+	new -> python3
+	show line is 'L'
+
+9. create config file 
+	anaconda prompt
+	check location of file
+		jupyter notebook --generate-config 
+	open the file
+	modify
+		c.NotebookApp.notebook_dir='INPUT_DIR'
+		CAUTION
+			INPUT_DIR: \ -> /
+
+10. Change to theme
+	anaconda prompt
+	pip install jupyterthemes
+	jt -l  => avaliable themes
+	jt -t THEME_NAME => apply theme
+	jt -r => RESET
+
+11. tensorflow hello world
+	import tensorflow as tf
+	box = tf.constant("Hello world") # constant로 만든 노드에 'Hello world'라는 문자열을 넣어 주겠다.
+	print(box)
+		# tf.Tensor(b'Hello world', shape=(), dtype=string)
+		# Rank, Shape, type의 3가지 속성이 출력됨
+		# 텐서플로우는 Data Flow Graph 형태, tensor의 flow(흐름)으로 표현되기 때문.
+		# 때문에 작동시켜야 실제 값이 출력됨
+	# 노드의 이름이 box가 아니라
+	# 이 과정을 box라고 하는 것
+	# constant는 상수를 입력하는 것
+	# Seossion()은 2.0부터 더 이상 사용되지 않음
+
+
+	
